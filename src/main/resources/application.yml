@@ -1,0 +1,5 @@
+server:
+  port: 8088
+
+name: zibo
+food: hello world 6
