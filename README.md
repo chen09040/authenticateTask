@@ -17,14 +17,12 @@ The program runs at localhost:8088
 
 ### 1、create user by name and password, fail if exist  
   
-$ curl -X POST -H "Content-Type: application/json" -d '{"name": "czb123","password": "Hello Việt Nam"}' "http://localhost:8088/user/"  
-  
+$ curl -X POST -H "Content-Type: application/json" -d '{"name": "czb123","password": "Hello Việt Nam"}' "http://localhost:8088/user/"    
 @ http://localhost:8088/user   
- 
 -> we will see the user "czb123" has the encrypted password "SGVsbG8gVmnhu4d0IE5hbQ=="  
 
 try again  
-$ curl -X POST -H "Content-Type: application/json" -d '{"name": "czb123","password": "Hello Việt Nam"}' "http://localhost:8088/user/" 
+$ curl -X POST -H "Content-Type: application/json" -d '{"name": "czb123","password": "Hello Việt Nam"}' "http://localhost:8088/user/"   
 -> {"timestamp":1649077095650,"status":400,"error":"Bad Request","exception":"java.lang.IllegalArgumentException","message":"user czb123 already exist","path":"/user/"}   
   
 it fails because the user already exists
